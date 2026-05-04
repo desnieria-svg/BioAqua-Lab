@@ -6,9 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Barang extends Model
 {
-    protected $fillable = [/* ... kolom yang sudah ada ... */];
+    protected $fillable = [
+        'kode',
+        'nama',
+        'kategori',
+        'jumlah',
+        'satuan',
+        'harga',
+        'supplier',
+        'tanggal',
+        'foto',
+    ];
 
-    // MASUKKAN DI SINI
     public function pesanans()
     {
         return $this->belongsToMany(Pesanan::class, 'barang_pesanan')
